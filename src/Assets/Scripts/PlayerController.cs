@@ -15,14 +15,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
         moveHorizontal = Input.GetAxis("Horizontal");
         moveVertical = Input.GetAxis("Vertical");
 
         Vector2 direction = new Vector2(moveHorizontal, moveVertical);
         Vector2 translate = direction * Time.deltaTime * (speed * PlayerManager.gameSpeed);
-
-
+        
         transform.Translate(translate);
     }
 
