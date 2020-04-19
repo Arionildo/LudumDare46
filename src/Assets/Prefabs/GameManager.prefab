@@ -43,4 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774050909fca0ae4ea8669f148ed7373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  progressLife: {fileID: 0}
   alive: 0
+  targetProgressLife: 10
