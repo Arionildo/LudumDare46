@@ -5,77 +5,83 @@ using UnityEngine;
 public class Bonfire : MonoBehaviour
 {
     public new string playerTag = "Player";
-    private SpriteRenderer spriteRenderer;
+    public float maxLifeTime = 15f;
+    public float largeBonfireTriggerTime = 10f;
+    public float mediumBonfireTriggerTime = 5f;
     private Animator animator;
-    private float fireIntensity = 1f;
     private bool isAvailable = false;
-    private float lifeTime = 15f;
+    private float currentLifeTime;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        currentLifeTime = maxLifeTime;
         animator = GetComponent<Animator>();
     }
+    
+    void FixedUpdate() {
+        updateLifeTime();
+        setBonfire(currentLifeTime);
 
-    void Update()
-    {
         if (isAvailable
-            && fireIntensity > 0
-            && Input.GetMouseButtonDown(0))
-        {
-            fireIntensity -= .3f;
-            spriteRenderer.color = new Color(1f, fireIntensity, fireIntensity, 1f);
+            && Input.GetMouseButtonDown(0)
+            && currentLifeTime < maxLifeTime){
+            feedFire();
+            isAvailable = false;
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        isAvailable = other.CompareTag(playerTag) && fireIntensity > 0;
+        isAvailable = other.CompareTag(playerTag);
+        Debug.Log("Pressione uma tecla para jogar o graveto na fogueira!");
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
         isAvailable = !other.CompareTag(playerTag);
-        //fireIntensity = 1;
-        //spriteRenderer.color = new Color(1f, .3f, .3f, 1f);
-        feedFire();
     }
-    
-    void FixedUpdate() {
-        lifeTime -= Time.deltaTime;
-        Debug.Log(lifeTime);
-        if(lifeTime > 10){
-            animator.SetBool("idle", true);
-            animator.SetBool("medio", false);
-            animator.SetBool("small", false);
-        } else if(lifeTime > 5){
-            animator.SetBool("medio", true);
-            animator.SetBool("idle", false);
-            animator.SetBool("small", false);
-        } else {
-            animator.SetBool("idle", false);
-            animator.SetBool("medio", false);
-            animator.SetBool("small", true);
-        }
-        if(lifeTime < 0){
-            lifeTime = 15;
+
+    void updateLifeTime() {
+        currentLifeTime -= Time.deltaTime;
+        if (currentLifeTime < 0) {
+            currentLifeTime = 0;
         }
     }
 
     void feedFire(){
-        lifeTime += 5;
+        currentLifeTime += 5;
+        if (currentLifeTime > maxLifeTime) {
+            currentLifeTime = maxLifeTime;
+        }
+        Debug.Log("A fogueira durará mais algum tempo!");
+    }
+
+    void setBonfire(float lifeTime) {
+        if(lifeTime > largeBonfireTriggerTime){
+            setLargeBonfire();
+        } else if(lifeTime > mediumBonfireTriggerTime){
+            setMediumBonfire();
+        } else {
+            setSmallBonfire();
+        }
     }
 
     void setLargeBonfire(){
-
+        animator.SetBool("idle", true);
+        animator.SetBool("medio", false);
+        animator.SetBool("small", false);
     }
 
     void setMediumBonfire(){
-
+        animator.SetBool("idle", false);
+        animator.SetBool("medio", true);
+        animator.SetBool("small", false);
     }
 
     void setSmallBonfire(){
-
+        animator.SetBool("idle", false);
+        animator.SetBool("medio", false);
+        animator.SetBool("small", true);
     }
 
 }
