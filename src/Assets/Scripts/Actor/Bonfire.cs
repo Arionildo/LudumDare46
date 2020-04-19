@@ -8,7 +8,7 @@ public class Bonfire : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private float fireIntensity = 1f;
-    private float lifeTime = 10f;
+    private float lifeTime = 15f;
 
     void Start()
     {
@@ -33,14 +33,12 @@ public class Bonfire : MonoBehaviour
         spriteRenderer.color = new Color(1f, .3f, .3f, 1f);
     }
 
-    void Update() {
-        lifeTime -= Time.deltaTime;    
+    void FixedUpdate() {
+        lifeTime -= Time.deltaTime;
         Debug.Log(lifeTime);
-        if(lifeTime < 7){
-            animator.SetBool("isMedium", true);
-        } else {
-            animator.SetBool("isMedium", false);     
-        } 
+        if(lifeTime < 10){
+            animator.SetBool("medio", true);
+        }
     }
 
     void setLargeBonfire(){
@@ -48,11 +46,11 @@ public class Bonfire : MonoBehaviour
     }
 
     void setMediumBonfire(){
-        
+
     }
 
     void setSmallBonfire(){
-        
+
     }
 
 }
