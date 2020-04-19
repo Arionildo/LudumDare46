@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bonfire : MonoBehaviour
 {
-    public new string playerTag = "Player";
+    public string playerTag = "Player";
     public float maxLifeTime = 15f;
     public float largeBonfireTriggerTime = 10f;
     public float mediumBonfireTriggerTime = 5f;
@@ -17,14 +17,16 @@ public class Bonfire : MonoBehaviour
         currentLifeTime = maxLifeTime;
         animator = GetComponent<Animator>();
     }
-    
-    void FixedUpdate() {
+
+    void FixedUpdate()
+    {
         updateLifeTime();
         setBonfire(currentLifeTime);
 
         if (isAvailable
             && Input.GetMouseButtonDown(0)
-            && currentLifeTime < maxLifeTime){
+            && currentLifeTime < maxLifeTime)
+        {
             feedFire();
             isAvailable = false;
         }
@@ -41,44 +43,57 @@ public class Bonfire : MonoBehaviour
         isAvailable = !other.CompareTag(playerTag);
     }
 
-    void updateLifeTime() {
+    void updateLifeTime()
+    {
         currentLifeTime -= Time.deltaTime;
-        if (currentLifeTime < 0) {
+        if (currentLifeTime < 0)
+        {
             currentLifeTime = 0;
         }
     }
 
-    void feedFire(){
+    void feedFire()
+    {
         currentLifeTime += 5;
-        if (currentLifeTime > maxLifeTime) {
+        if (currentLifeTime > maxLifeTime)
+        {
             currentLifeTime = maxLifeTime;
         }
         Debug.Log("A fogueira durará mais algum tempo!");
     }
 
-    void setBonfire(float lifeTime) {
-        if(lifeTime > largeBonfireTriggerTime){
+    void setBonfire(float lifeTime)
+    {
+        if (lifeTime > largeBonfireTriggerTime)
+        {
             setLargeBonfire();
-        } else if(lifeTime > mediumBonfireTriggerTime){
+        }
+        else if (lifeTime > mediumBonfireTriggerTime)
+        {
             setMediumBonfire();
-        } else {
+        }
+        else
+        {
             setSmallBonfire();
         }
     }
 
-    void setLargeBonfire(){
+    void setLargeBonfire()
+    {
         animator.SetBool("idle", true);
         animator.SetBool("medio", false);
         animator.SetBool("small", false);
     }
 
-    void setMediumBonfire(){
+    void setMediumBonfire()
+    {
         animator.SetBool("idle", false);
         animator.SetBool("medio", true);
         animator.SetBool("small", false);
     }
 
-    void setSmallBonfire(){
+    void setSmallBonfire()
+    {
         animator.SetBool("idle", false);
         animator.SetBool("medio", false);
         animator.SetBool("small", true);
