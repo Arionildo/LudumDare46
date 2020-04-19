@@ -6,6 +6,8 @@ public class Bonfire : MonoBehaviour
 {
     public new string playerTag = "Player";
     public float maxLifeTime = 15f;
+    public float largeBonfireTriggerTime = 10f;
+    public float largeBonfireTriggerTime = 5f;
     private Animator animator;
     private bool isAvailable = false;
     private float currentLifeTime;
@@ -55,9 +57,9 @@ public class Bonfire : MonoBehaviour
     }
 
     void setBonfire(float lifeTime) {
-        if(lifeTime > 10){
+        if(lifeTime > largeBonfireTriggerTime){
             setLargeBonfire();
-        } else if(lifeTime > 5){
+        } else if(lifeTime > mediumBonfireTriggerTime){
             setMediumBonfire();
         } else {
             setSmallBonfire();
