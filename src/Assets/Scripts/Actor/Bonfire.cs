@@ -7,7 +7,7 @@ public class Bonfire : MonoBehaviour
     public new string playerTag = "Player";
     public float maxLifeTime = 15f;
     public float largeBonfireTriggerTime = 10f;
-    public float largeBonfireTriggerTime = 5f;
+    public float mediumBonfireTriggerTime = 5f;
     private Animator animator;
     private bool isAvailable = false;
     private float currentLifeTime;
