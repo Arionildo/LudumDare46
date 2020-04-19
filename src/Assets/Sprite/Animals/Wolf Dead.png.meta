@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: c1f054c5105c4c640b08401c5d605103
+guid: 5060a081eb68fd44bbf55e4a9cc8ab49
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -458185587419916677
-    second: Wolf_0
+      213: 2760041160515502187
+    second: Wolf Dead_0
   - first:
-      213: -5547194825390550217
-    second: Wolf_1
-  - first:
-      213: 6891357095817125983
-    second: Wolf_2
-  - first:
-      213: 2672853027243246175
-    second: Wolf_3
-  - first:
-      213: -6079965141102547391
-    second: Wolf_4
-  - first:
-      213: -6983649135101308852
-    second: Wolf_5
+      213: 3757406426229953584
+    second: Wolf Dead_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,91 +93,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wolf_0
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 225
-        width: 210
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b76d1a4c2a234a9f0800000000000000
-      internalID: -458185587419916677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wolf_1
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 225
-        width: 210
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73316b452b76403b0800000000000000
-      internalID: -5547194825390550217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wolf_2
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 115
-        width: 210
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f502c8444c403af50800000000000000
-      internalID: 6891357095817125983
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wolf_3
-      rect:
-        serializedVersion: 2
-        x: 225
-        y: 115
-        width: 210
-        height: 100
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5249a9baa1e71520800000000000000
-      internalID: 2672853027243246175
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wolf_4
+      name: Wolf Dead_0
       rect:
         serializedVersion: 2
         x: 5
@@ -203,20 +107,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14e23ddcaef9f9ba0800000000000000
-      internalID: -6079965141102547391
+      spriteID: b60cbf9efc2ad4620800000000000000
+      internalID: 2760041160515502187
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf_5
+      name: Wolf Dead_1
       rect:
         serializedVersion: 2
         x: 225
-        y: 5
+        y: 0
         width: 210
-        height: 100
+        height: 70
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c409252dc18151f90800000000000000
-      internalID: -6983649135101308852
+      spriteID: 034d430bc3df42430800000000000000
+      internalID: 3757406426229953584
       vertices: []
       indices: 
       edges: []
