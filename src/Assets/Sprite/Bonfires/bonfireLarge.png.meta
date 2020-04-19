@@ -8,18 +8,6 @@ TextureImporter:
   - first:
       213: 2030789099154343469
     second: bonfireLarge_1
-  - first:
-      213: 5836441280348358774
-    second: bonfireLarge_2
-  - first:
-      213: 1594359494945658561
-    second: bonfireLarge_3
-  - first:
-      213: 366819213614320581
-    second: bonfireLarge_4
-  - first:
-      213: -5515593256873990619
-    second: bonfireLarge_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -82,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -94,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0

@@ -1,13 +1,25 @@
 fileFormatVersion: 2
-guid: 3ad331ce075a7c84da500fe763b5f495
+guid: a86deaec539f2ab4c825bcab0f686082
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6354598835294981348
-    second: bonfireSmall_0
+      213: 5956877509830953945
+    second: bonfireSmall _0
   - first:
-      213: 1108403441566364104
-    second: bonfireSmall_1
+      213: -1046392511167716434
+    second: bonfireSmall _1
+  - first:
+      213: -1078321093530417765
+    second: bonfireSmall _2
+  - first:
+      213: -1982268035436065863
+    second: bonfireSmall _3
+  - first:
+      213: -6429830749751190179
+    second: bonfireSmall _4
+  - first:
+      213: 1929737648390641781
+    second: bonfireSmall _5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bonfireSmall_0
+      name: bonfireSmall _0
       rect:
         serializedVersion: 2
         x: 0
@@ -107,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ec4edbf8f1103850800000000000000
-      internalID: 6354598835294981348
+      spriteID: 9dbccf7c8841ba250800000000000000
+      internalID: 5956877509830953945
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bonfireSmall_1
+      name: bonfireSmall _1
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c1326abe07d16f00800000000000000
-      internalID: 1108403441566364104
+      spriteID: ea3283c1e877a71f0800000000000000
+      internalID: -1046392511167716434
       vertices: []
       indices: 
       edges: []
