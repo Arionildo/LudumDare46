@@ -36,13 +36,14 @@ public class Bonfire : MonoBehaviour
     void OnTriggerExit2D(Collider2D other)
     {
         isAvailable = !other.CompareTag(playerTag);
-        fireIntensity = 1;
-        spriteRenderer.color = new Color(1f, .3f, .3f, 1f);
+        //fireIntensity = 1;
+        //spriteRenderer.color = new Color(1f, .3f, .3f, 1f);
         feedFire();
     }
     
     void FixedUpdate() {
         lifeTime -= Time.deltaTime;
+        Debug.Log(lifeTime);
         if(lifeTime > 10){
             animator.SetBool("idle", true);
             animator.SetBool("medio", false);
