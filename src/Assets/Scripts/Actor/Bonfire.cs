@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Bonfire : MonoBehaviour
 {
-    public new string tag = "Player";
+    public new string playerTag = "Player";
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private float fireIntensity = 1f;
+    private bool isAvailable = false;
     private float lifeTime = 15f;
 
     void Start()
@@ -16,19 +17,25 @@ public class Bonfire : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void Update()
     {
-        if (Input.GetMouseButtonDown(0)
-            && other.CompareTag(tag)
-            && fireIntensity > 0)
+        if (isAvailable
+            && fireIntensity > 0
+            && Input.GetMouseButtonDown(0))
         {
             fireIntensity -= .3f;
             spriteRenderer.color = new Color(1f, fireIntensity, fireIntensity, 1f);
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        isAvailable = other.CompareTag(playerTag) && fireIntensity > 0;
+    }
+
     void OnTriggerExit2D(Collider2D other)
     {
+        isAvailable = !other.CompareTag(playerTag);
         fireIntensity = 1;
         spriteRenderer.color = new Color(1f, .3f, .3f, 1f);
     }
