@@ -1221,19 +1221,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 414677811, guid: 3d957c92f348c0c42b8b145f1c04074e, type: 3}
-      propertyPath: m_Radius
-      value: 0.6
-      objectReference: {fileID: 0}
     - target: {fileID: 5945300216543920043, guid: 3d957c92f348c0c42b8b145f1c04074e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7184
+      value: -0.184
       objectReference: {fileID: 0}
     - target: {fileID: 5945300216543920043, guid: 3d957c92f348c0c42b8b145f1c04074e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.558
+      value: 0.189
       objectReference: {fileID: 0}
     - target: {fileID: 5945300216543920043, guid: 3d957c92f348c0c42b8b145f1c04074e,
         type: 3}
@@ -1283,7 +1279,7 @@ PrefabInstance:
     - target: {fileID: 5945300216543920054, guid: 3d957c92f348c0c42b8b145f1c04074e,
         type: 3}
       propertyPath: m_Name
-      value: bonfireLarge_0
+      value: bonfire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d957c92f348c0c42b8b145f1c04074e, type: 3}
@@ -1298,16 +1294,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6599016473836752969, guid: 145ac5dc5b259d24b9d7697a29b075ee,
-        type: 3}
-      propertyPath: progressLife
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6599016473836752969, guid: 145ac5dc5b259d24b9d7697a29b075ee,
-        type: 3}
-      propertyPath: targetProgressLife
-      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6599016473836752974, guid: 145ac5dc5b259d24b9d7697a29b075ee,
         type: 3}
