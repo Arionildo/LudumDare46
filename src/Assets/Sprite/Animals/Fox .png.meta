@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: c1f054c5105c4c640b08401c5d605103
+guid: 591fdbf078e57594499396099890a51c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -458185587419916677
-    second: Wolf_0
+      213: -3779699664165750215
+    second: Fox _0
   - first:
-      213: -5547194825390550217
-    second: Wolf_1
+      213: 3599647948121349582
+    second: Fox _1
   - first:
-      213: 6891357095817125983
-    second: Wolf_2
+      213: 8003831788687616453
+    second: Fox _2
   - first:
-      213: 2672853027243246175
-    second: Wolf_3
+      213: -1698080634237632922
+    second: Fox _3
   - first:
-      213: -6079965141102547391
-    second: Wolf_4
+      213: 6362450684023176646
+    second: Fox _4
   - first:
-      213: -6983649135101308852
-    second: Wolf_5
+      213: -9090012753929266825
+    second: Fox _5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wolf_0
+      name: Fox _0
       rect:
         serializedVersion: 2
         x: 5
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b76d1a4c2a234a9f0800000000000000
-      internalID: -458185587419916677
+      spriteID: 93abcbf5e2fcb8bc0800000000000000
+      internalID: -3779699664165750215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf_1
+      name: Fox _1
       rect:
         serializedVersion: 2
         x: 225
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73316b452b76403b0800000000000000
-      internalID: -5547194825390550217
+      spriteID: ecd9c30bcb484f130800000000000000
+      internalID: 3599647948121349582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf_2
+      name: Fox _2
       rect:
         serializedVersion: 2
         x: 5
@@ -161,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f502c8444c403af50800000000000000
-      internalID: 6891357095817125983
+      spriteID: 5c964be0b92531f60800000000000000
+      internalID: 8003831788687616453
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf_3
+      name: Fox _3
       rect:
         serializedVersion: 2
         x: 225
@@ -182,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5249a9baa1e71520800000000000000
-      internalID: 2672853027243246175
+      spriteID: 66ebb44f8a43f68e0800000000000000
+      internalID: -1698080634237632922
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf_4
+      name: Fox _4
       rect:
         serializedVersion: 2
         x: 5
@@ -203,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14e23ddcaef9f9ba0800000000000000
-      internalID: -6079965141102547391
+      spriteID: 6cd742aff27fb4850800000000000000
+      internalID: 6362450684023176646
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wolf_5
+      name: Fox _5
       rect:
         serializedVersion: 2
         x: 225
@@ -224,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c409252dc18151f90800000000000000
-      internalID: -6983649135101308852
+      spriteID: 779964eaf89c9d180800000000000000
+      internalID: -9090012753929266825
       vertices: []
       indices: 
       edges: []
