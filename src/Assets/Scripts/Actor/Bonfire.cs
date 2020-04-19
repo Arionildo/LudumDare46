@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bonfire : MonoBehaviour
 {
-    public string tag = "Player";
+    public new string tag = "Player";
     private SpriteRenderer spriteRenderer;
     private float fireIntensity = 1f;
 
