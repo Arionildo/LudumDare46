@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Bonfire : MonoBehaviour
 {
     public string playerTag = "Player";
     public float maxLifeTime = 15f;
-    public float largeBonfireTriggerTime = 10f;
-    public float mediumBonfireTriggerTime = 5f;
+    public float largeBonfireTriggerTime = 15f;
+    public float mediumBonfireTriggerTime = 10f;
+    public float smallBonfireTriggerTime = 5f;
     private Animator animator;
+
     private bool isAvailable = false;
+
     private float currentLifeTime;
+
+    public Slider progressBonfire;
+    public float targetProgressFire;
 
     private MessageController msgController;
 
@@ -71,6 +78,7 @@ public class Bonfire : MonoBehaviour
 
     void setBonfire(float lifeTime)
     {
+        progressBonfire.value = lifeTime;
         if (lifeTime > largeBonfireTriggerTime)
         {
             setLargeBonfire();
