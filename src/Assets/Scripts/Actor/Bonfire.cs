@@ -44,7 +44,9 @@ public class Bonfire : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        isAvailable = !other.CompareTag(playerTag);
+        if (other.CompareTag(playerTag)) {
+            isAvailable = false;
+        }
     }
 
     void updateLifeTime()
@@ -58,7 +60,7 @@ public class Bonfire : MonoBehaviour
 
     void feedFire()
     {
-        currentLifeTime += 5;
+        currentLifeTime += 7;
         if (currentLifeTime > maxLifeTime)
         {
             currentLifeTime = maxLifeTime;

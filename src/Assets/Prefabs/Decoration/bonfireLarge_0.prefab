@@ -16,9 +16,10 @@ GameObject:
   - component: {fileID: 9123683390721240043}
   - component: {fileID: 8400216614071569412}
   - component: {fileID: 957165986707828629}
+  - component: {fileID: 8126981486544269010}
   m_Layer: 0
   m_Name: bonfireLarge_0
-  m_TagString: Untagged
+  m_TagString: Bonfire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -375,3 +376,16 @@ MonoBehaviour:
   maxLifeTime: 15
   largeBonfireTriggerTime: 10
   mediumBonfireTriggerTime: 5
+--- !u!114 &8126981486544269010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945300216543920054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9deb6374ad7c564a8772f8442ad7b3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Message: {fileID: 0}
