@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb2d;
 
+    private AudioSource audioSource;
+
     void Start()
     {
         Time.timeScale = 1;
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
         animator = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         rb2d = gameObject.GetComponent<Rigidbody2D>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -27,10 +30,12 @@ public class PlayerController : MonoBehaviour
         if (direction.magnitude > 0f)
         {
             animator.Play("Sprint");
+            audioSource.enabled = true;
         }
         else
         {
             animator.Play("Idle");
+            audioSource.enabled = false;
         }
 
         if (direction.x < 0)
@@ -38,7 +43,7 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        if (direction.x > 0)
+        else if (direction.x > 0)
         {
             spriteRenderer.flipX = true;
         }
