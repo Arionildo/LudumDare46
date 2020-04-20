@@ -12,10 +12,14 @@ public class Bonfire : MonoBehaviour
     private bool isAvailable = false;
     private float currentLifeTime;
 
+    private MessageController msgController;
+
+
     void Start()
     {
         currentLifeTime = maxLifeTime;
         animator = GetComponent<Animator>();
+        msgController = GetComponent<MessageController>();
     }
 
     void FixedUpdate()
@@ -24,7 +28,7 @@ public class Bonfire : MonoBehaviour
         setBonfire(currentLifeTime);
 
         if (isAvailable
-            && Input.GetMouseButtonDown(0)
+            && Input.GetKeyDown(KeyCode.Space)
             && currentLifeTime < maxLifeTime)
         {
             feedFire();
@@ -35,7 +39,7 @@ public class Bonfire : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         isAvailable = other.CompareTag(playerTag);
-        Debug.Log("Pressione uma tecla para jogar o graveto na fogueira!");
+        msgController.ShowMessage("Press Space to throw a stick on the bonfire");
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -59,7 +63,7 @@ public class Bonfire : MonoBehaviour
         {
             currentLifeTime = maxLifeTime;
         }
-        Debug.Log("A fogueira durará mais algum tempo!");
+        msgController.ShowMessage("Hope the bonfire will last longer!");
     }
 
     void setBonfire(float lifeTime)
