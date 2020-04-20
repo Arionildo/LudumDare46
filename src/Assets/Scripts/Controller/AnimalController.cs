@@ -36,7 +36,8 @@ public class AnimalController : MonoBehaviour
         {
             PatrolArea();
         }
-        if (isDead && isAvailable && Input.GetKeyDown(KeyCode.Space)) {
+        if (isDead && isAvailable && Input.GetKeyDown(KeyCode.Space))
+        {
             Debug.Log("+" + foodValue + " de vida!");
             Destroy(gameObject);
         }
@@ -60,7 +61,8 @@ public class AnimalController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (isDead) {
+        if (isDead)
+        {
             Debug.Log("Pressione uma tecla para coletar o alimento!");
             isAvailable = other.CompareTag(playerTag);
             return;
@@ -95,7 +97,7 @@ public class AnimalController : MonoBehaviour
         {
             return;
         }
-        
+
         if (waitTime <= 0)
         {
             UpdateMoveSpot();
@@ -114,7 +116,8 @@ public class AnimalController : MonoBehaviour
         moveSpot.position = new Vector2(newX, newY);
 
         if (Mathf.Abs(moveSpot.position.x) > moveSpotLimitPosition
-            || Mathf.Abs(moveSpot.position.y) > moveSpotLimitPosition) {
+            || Mathf.Abs(moveSpot.position.y) > moveSpotLimitPosition)
+        {
             UpdateMoveSpot();
         }
     }
