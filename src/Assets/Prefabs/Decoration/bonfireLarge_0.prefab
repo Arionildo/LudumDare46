@@ -373,9 +373,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTag: Player
-  maxLifeTime: 15
-  largeBonfireTriggerTime: 10
-  mediumBonfireTriggerTime: 5
+  maxLifeTime: 30
+  largeBonfireTriggerTime: 20
+  mediumBonfireTriggerTime: 10
+  smallBonfireTriggerTime: 5
+  progressBonfire: {fileID: 0}
+  targetProgressFire: 0
 --- !u!114 &8126981486544269010
 MonoBehaviour:
   m_ObjectHideFlags: 0
