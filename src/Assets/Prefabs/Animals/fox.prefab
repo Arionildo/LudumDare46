@@ -194,9 +194,9 @@ MonoBehaviour:
   speed: 0.5
   startWaitTime: 5
   minHorizontal: -2
-  minVertical: -1
+  minVertical: -2
   maxHorizontal: 2
-  maxVertical: 1
+  maxVertical: 2
   moveSpot: {fileID: 0}
   playerTag: Player
   foodValue: 50

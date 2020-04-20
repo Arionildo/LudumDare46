@@ -13,6 +13,7 @@ public class AnimalController : MonoBehaviour
     public Transform moveSpot;
     public string playerTag = "Player";
     public int foodValue;
+    public float moveSpotLimitPosition = 2.8f;
 
     private float waitTime;
     private SpriteRenderer spriteRenderer;
@@ -97,8 +98,8 @@ public class AnimalController : MonoBehaviour
         
         if (waitTime <= 0)
         {
-            moveSpot.position = new Vector2(Random.Range(minHorizontal, maxHorizontal), Random.Range(minVertical, maxVertical));
-            waitTime = Random.Range(0, startWaitTime);
+            UpdateMoveSpot();
+            waitTime = Random.Range(1, startWaitTime);
         }
         else
         {
@@ -108,7 +109,14 @@ public class AnimalController : MonoBehaviour
 
     void UpdateMoveSpot()
     {
-        moveSpot.position = new Vector2(Random.Range(minHorizontal, maxHorizontal), Random.Range(minVertical, maxVertical));
+        float newX = transform.position.x + Random.Range(minHorizontal, maxHorizontal);
+        float newY = transform.position.y + Random.Range(minVertical, maxVertical);
+        moveSpot.position = new Vector2(newX, newY);
+
+        if (Mathf.Abs(moveSpot.position.x) > moveSpotLimitPosition
+            || Mathf.Abs(moveSpot.position.y) > moveSpotLimitPosition) {
+            UpdateMoveSpot();
+        }
     }
 
     void CheckFlipRenderer(Vector2 position)
