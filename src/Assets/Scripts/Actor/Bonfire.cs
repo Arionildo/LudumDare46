@@ -68,7 +68,7 @@ public class Bonfire : MonoBehaviour
 
     void feedFire()
     {
-        currentLifeTime += 7;
+        currentLifeTime += 20;
         if (currentLifeTime > maxLifeTime)
         {
             currentLifeTime = maxLifeTime;

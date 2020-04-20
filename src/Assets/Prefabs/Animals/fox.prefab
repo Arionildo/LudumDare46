@@ -200,3 +200,4 @@ MonoBehaviour:
   moveSpot: {fileID: 0}
   playerTag: Player
   foodValue: 50
+  moveSpotLimitPosition: 2.8

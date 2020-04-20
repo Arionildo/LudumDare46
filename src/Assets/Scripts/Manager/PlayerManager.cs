@@ -51,4 +51,8 @@ public class PlayerManager: MonoBehaviour
         DecrementProgress(0.75f);
     }
 
+    public void SetLife(int value) {
+        progressLife.value += Mathf.Round(value);
+    }
+
 }

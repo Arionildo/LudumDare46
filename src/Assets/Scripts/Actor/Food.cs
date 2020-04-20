@@ -23,6 +23,7 @@ public class Food : MonoBehaviour
             && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("+" + foodValue + " de vida!");
+            PlayerManager.instance.SetLife(foodValue);
             isAvailable = false;
             GetComponent<SpriteRenderer>().sprite = spriteWithoutFood;
             currentCooldown = cooldown;
