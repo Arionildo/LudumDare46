@@ -14,6 +14,7 @@ public class AnimalController : MonoBehaviour
     public string playerTag = "Player";
     public int foodValue;
     public float moveSpotLimitPosition = 2.8f;
+    public int damage = 20;
 
     private float waitTime;
     private SpriteRenderer spriteRenderer;
@@ -39,6 +40,7 @@ public class AnimalController : MonoBehaviour
         if (isDead && isAvailable && Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("+" + foodValue + " de vida!");
+            PlayerManager.instance.SetLife(foodValue);
             Destroy(gameObject);
         }
     }
@@ -71,6 +73,7 @@ public class AnimalController : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             Debug.Log("Fuja! Você está sendo atacado!");
+            PlayerManager.instance.SetLife(-damage);
             CheckFlipRenderer(other.transform.position);
             SetAttackState(true);
         }
