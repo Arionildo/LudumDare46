@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class PlayerManager: MonoBehaviour
+public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance = null;
     public Slider progressLife;
@@ -27,8 +28,13 @@ public class PlayerManager: MonoBehaviour
         gameSpeed = 1f;
     }
 
-    private void Update() {
+    private void Update()
+    {
         ProgressLife();
+        if (progressLife.value <= 0)
+        {
+            Die();
+        }
     }
 
     internal static void ResetValues()
@@ -51,8 +57,21 @@ public class PlayerManager: MonoBehaviour
         DecrementProgress(0.75f);
     }
 
-    public void SetLife(int value) {
+    public void SetLife(int value)
+    {
         progressLife.value += Mathf.Round(value);
+    }
+
+    void Die()
+    {
+        PlayerManager.instance.alive = false;
+        Time.timeScale = 0;
+        Invoke("Reload", 2);
+    }
+
+    void Reload()
+    {
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
     }
 
 }

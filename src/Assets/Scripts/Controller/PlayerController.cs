@@ -51,10 +51,4 @@ public class PlayerController : MonoBehaviour
         Vector2 force = direction * speed;
         rb2d.AddForce(force);
     }
-
-    public void Die()
-    {
-        PlayerManager.instance.alive = false;
-        Time.timeScale = 0;
-    }
 }
